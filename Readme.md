@@ -1,4 +1,4 @@
-![weather.png]
+![weather.png](https://github.com/loogmaii/Project_2_Mai_Jana/blob/main/pooooh.gif)
 
 # Unit 2: A Distributed Weather Station for ISAK
 

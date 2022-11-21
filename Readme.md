@@ -1,4 +1,4 @@
-![weather.png](weather_asbt.png)
+![weather.png]
 
 # Unit 2: A Distributed Weather Station for ISAK
 

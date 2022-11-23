@@ -44,7 +44,7 @@ Considering the budgetary constrains of the client and the hardware requirements
 ## Record of Tasks
 | Task No | Planned Action                                                | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
 |---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
-| 1       | Write the Problem context                        | 10min         | Nov 22                 | A         |
+| 1       | Brainstorm and write the Problem context                        |         |                  |         |
 
 ## Test Plan
 

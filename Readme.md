@@ -43,13 +43,13 @@ Considering the budgetary constrains of the client and the hardware requirements
 
 
 ## Record of Tasks
-| Task No |       Planned Action      |             Planned Outcome             | Time estimate | Target completion date | Criterion |
-|:-------:|:-------------------------:|:---------------------------------------:|:-------------:|:----------------------:|-----------|
-|    1    | Write the Problem context | Identify the audience and their problem | 20 min        | Nov 22                 | A         |
-| 2       |                           |                                         |               |                        |           |
-|         |                           |                                         |               |                        |           |
-|         |                           |                                         |               |                        |           |
-|         |                           |                                         |               |                        |           |
+| Task No |       Planned Action      |                            Planned Outcome                            | Time estimate | Target completion date | Criterion |
+|:-------:|:-------------------------:|:---------------------------------------------------------------------:|:-------------:|:----------------------:|-----------|
+|    1    | Write the Problem context | Identify the audience and their problem                               | 20 min        | Nov 22                 | A         |
+| 2       | collect materials         | develop a better understanding of the functions of the system diagram | 10 min        | Nov 24                 | B         |
+|         |                           |                                                                       |               |                        |           |
+|         |                           |                                                                       |               |                        |           |
+|         |                           |                                                                       |               |                        |           |
 
 ## Test Plan
 

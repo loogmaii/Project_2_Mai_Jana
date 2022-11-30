@@ -61,8 +61,8 @@ Considering the budgetary constrains of the client and the hardware requirements
 ## List of techniques used
 
 ## Development
-
-
+## MVP (minimal viable product 'prototype')
+https://drive.google.com/file/d/1CdZhVE7wxouNFcLqTq6FZ73z6bevApU4/view?usp=share_link
 # Criteria D: Functionality
 
 A 7 min video demonstrating the proposed solution with narration

@@ -46,14 +46,18 @@ Considering the budgetary constrains of the client and the hardware requirements
 
 
 ## Record of Tasks
-| Task No |       Planned Action      |                            Planned Outcome                            | Time estimate | Target completion date | Criterion |
-|:-------:|:-------------------------:|:---------------------------------------------------------------------:|:-------------:|:----------------------:|-----------|
-|    1    | Write the Problem context | Identify the audience and their problem                               | 20 min        | Nov 22                 | A         |
-| 2       | collect materials         | develop a better understanding of the functions of the system diagram | 10 min        | Nov 24                 | B         |
-|         |                           |                                                                       |               |                        |           |
-|         |                           |                                                                       |               |                        |           |
-|         |                           |                                                                       |               |                        |           |
-
+| Task No |                  Planned Action                  |                                                             Planned Outcome                                                             | Time estimate | Target completion date | Criterion |
+|:-------:|:------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------:|:-------------:|:----------------------:|-----------|
+| 1       | Write the Problem context                        | Identify the audience and their problem                                                                                                 | 20 min        | Nov 22                 | A         |
+|         | Create success criteria                          | Ensure the final product satisfies client's needs                                                                                       | 10 min        | Nov 23                 | A         |
+|         | Write design statement                           | Create a mutual understanding between team members and client                                                                           | 10 min        | Nov 23                 | A         |
+|         | Write proposed solution                          | Recieve feedback and approval to continue development of product                                                                        | 10 min        | Nov 24                 | B         |
+|         | List materials needed                            | Establish understanding of materials needed for the product to function and have a better understanding of the system diagram           | 10 min        | Nov 24                 | A         |
+|         | Collect materials and sign scope of work         | Obtain all the supplies required to build a weather station in the dorm and sign them out with the aim of only doing so for the client. | 10 min        | Nov 24                 | A         |
+|         | Download necessary libraries and applications.   | Prepare the computer to accept data from the sensor and to perform upcoming coding.                                                     | 20 min        | Nov 26                 | A         |
+|         | Produce MVP (minimal viable product 'prototype') | Provide client with general idea of what the product will look like                                                                     | 15 min        | Nov 25                 | C         |
+|         | Film MVP to show to client                       | A clear video that provides client with a clear idea of what the product will look like                                                 | 20 min        | Nov 26                 | C         |
+|         | Download necessary libraries and applications.   | Prepare the computer to accept data from the sensor and to perform upcoming coding.                                                     | 20 min        | Nov 26                 | A         |
 ## Test Plan
 
 # Criteria C: Development

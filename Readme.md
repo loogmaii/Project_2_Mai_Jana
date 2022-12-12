@@ -63,7 +63,16 @@ Considering the budgetary constrains of the client and the hardware requirements
 | 13          | Produce MVP (minimal viable product 'prototype')                                    | Provide client with general idea of what the product will look like                                                                    | 20 min            | Nov 26                     | C             |
 | 14          | Film MVP to show to client                                                          | A clear video that provides the client with a clear idea of what the product will look like                                            | 20 min            | Nov 26                     | C             |
 | 15          | Run code for 48 hours to collect temperature and humidity data in R3-10 room A      | Obtain 48 hours of 5-minute approximate temperature and humidity data from R3-10A.                                                     | 48 hours          | Nov 27                     | C             |
+
 ## Test Plan
+
+| **Software Test Type** | **Input** | **Process** | **Output** |
+|------------------------|-----------|-------------|------------|
+| Unit Testing           |           |             |            |
+| Integration Testing    |           |             |            |
+| System Testing         |           |             |            |
+| Performance Testing    |           |             |            |
+| Usability Testing      |           |             |            |
 
 # Criteria C: Development
 

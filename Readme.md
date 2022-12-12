@@ -8,15 +8,19 @@
 
 It is December in UWC ISAK and Malcolm-San is starting to feel cold and sick. He suspects that the reason behind his cold is the change of humidity on campus. The reason behind his suspicion is that high humidity promotes the growth of mold which can cause respiratory issues [^1]. For that reason, he went to discuss with Mim-san who in fact denied his suspicions and said that it was just because his body is not adapting fast enough, since he is from Africa. To prove his point, he asked Jana and Mai to measure the temperature and humidity both inside and outside of the residences to store all the data in a graph - for everyone to be able to understand whether the humidity and temperature levels are healthy for the human body or not. From the results, it would be able to either confirm his suspicions or deny them. Finally, his last request is for them to make a poster to print out and hang up throughout the school.
 
-## Proposed Solution
+## Rationale for Proposed Solution
 
 Considering the client requirements an adequate solution includes a low cost sensing device for humidity and temperature and a custom data script that process and anaysis the samples acquired. For a low cost sensing device an adequate alternative is the DHT11 sensor[^2] which is offered online for less than 5 USD and provides adequare precision and range for the client requirements (Temperature Range: 0°C to 50°C, Humidity Range: 20% to 90%). Similar devices such as the DHT22, AHT20 or the AM2301B [^3] have higher specifications, however the DHT11 uses a simple serial communication (SPI) rather than more eleborated protocols such as the I2C used by the alternatives. For the range, precision and accuracy required in this applicaiton the DHT11 provides the best compromise. Connecting the DHT11 sensor to a computer requires a device that provides a Serial Port communication. A cheap and often used alternative for prototyping is the Arduino UNO microcontroller [^4]. "Arduino is an open-source electronics platform based on easy-to-use hardware and software"[^5]. In additon to the low cost of the Arduino (< 6USD), this devide is programable and expandable[^2]. Other alternatives include diffeerent versions of the original Arduino but their size and price make them a less adequate solution.
 
 Considering the budgetary constrains of the client and the hardware requirements, the software tool that I proposed for this solution is Python. Python is open source, it is mature and supported in mutiple platforms (platform-independent) including macOS, Windows, Linux and can also be used to program the Arduino microprocessor [^6]. In comparison to the alternative C or C++, which share similar features, Python is a High level programming language (HLL) with high abstraction [^8]. For example, memory management is automatic in Python whereas it is responsability of the C/C++ developer to allocate and free up memory [^8], this could result in faster applications but also memory problems. In addition a HLL language will allow me and future developers extend the solution or solve issues proptly.  
 
+It will take 2 weeks to make and will be evaluated according to the criteria A, B and C.  
+
 ## Design statement
 
 In order to inform the client whether the temperature and humidity levels are at a healthy level or not, this project aims to develop a low-cost weather station that measures the values inside a dorm room (locally) and outside the house (remotely). It will also display a prediction for the next 12 hours for both temperature and humidity. To make the data easier for the client to understand, mathematical modeling will be used to visualize the data.
+
+
 
 [^1]:American Lung Association. “Mold and Dampness.” Lung.org, 2022, www.lung.org/clean-air/at-home/indoor-air-pollutants/mold-and-dampness. Accessed 12 Dec. 2022.
 [^2]: Industries, Adafruit. “DHT11 Basic Temperature-Humidity Sensor + Extras.” Adafruit Industries Blog RSS, https://www.adafruit.com/product/386. 

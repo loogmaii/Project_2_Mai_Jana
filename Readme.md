@@ -107,6 +107,7 @@ Data consisting of the humidity and temperature levels every 5 minutes during th
 
 <img width="1351" alt="Screen Shot 2565-12-13 at 12 06 44" src="https://user-images.githubusercontent.com/111941936/207216625-adbbecfc-3f4f-4b57-8a20-2d77a5de15ac.png">
 
+**Fig.1** Shows the function used to only acquire the data apropriate for the needed time period.
 ```.py
 def get_sensor(readings: list, id: int) -> list:
     data = []
@@ -128,7 +129,7 @@ def get_sensor(readings: list, id: int) -> list:
 
     print(data)
 ```
-**Fig.6** Shows the function used to only acquire the data apropriate for the needed time period.
+**Fig.2** Shows the csv file in which we collected the data from the outside of the house
 ![](data.png)
 
 # Criteria C: Development

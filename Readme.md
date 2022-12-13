@@ -48,6 +48,10 @@ In order to inform the client whether the temperature and humidity levels are at
 
 **Fig.1** shows the system diagram for the proposed solution (**SL**). The indoor variables will be measured using an Arduino microprocessor and the sensor DHT11 conencted to the local computer (Laptop) located inside a room. The outdoor variables will be requested to the remote server using a GET request to the API of the server at ```192.168.6.147/readings```. The local values are stored in a CSV database locally.
 
+<img width="1440" alt="Screen Shot 2565-12-13 at 13 44 00" src="https://user-images.githubusercontent.com/111941936/207228702-ac430a05-cff4-4092-a52c-792fb17f0b8e.png">
+
+**Fig.2** shows the system diagram produced by our group (**SL**)
+
 ## List of Materials
 
 | Material               | Quantity |

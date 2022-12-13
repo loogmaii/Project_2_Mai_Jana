@@ -171,7 +171,8 @@ Shows the format in which we stored data in the csv file
 9. Writing in a csv file
 10. Plotting graph 
  
-## Libraries used                                                                       1. Matplotlib
+## Libraries used
+1. Matplotlib
 2. NumPy
 3. Requests
 4. Serial

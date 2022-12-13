@@ -312,7 +312,75 @@ for i in x_model1:
     
 <img width="684" alt="Screen Shot 2565-12-14 at 00 08 10" src="https://user-images.githubusercontent.com/111941936/207369896-fbc4f12d-bcde-4af9-98e9-ed3bd6f6316b.png">
 
-<sub>Fig() shows the graphs  for both the smoothed out line(Blue) and linear line (Red)  
+<sub>Fig() shows the graphs  for both the smoothed out line(Blue) and linear line (Red)
+
+## 3. The solution provides a comparative analysis of the Humidity and Temperature levels for each Local and Remote location including mean, standard deviation, minimum, maximum, and median.
+
+Comparative analysis facilitates a deeper comprehension of the problem and assists in formulating solutions. We made the decision to create additional line equations, one for each value, to be added to the smoothed-out data graph in order to satisfy the client with regard to this condition. This would help the client understand the differences and similarities in temperature and humidity levels between each local and remote location.
+
+Like we did for the previous graphs, we requested the data from the CSV file for the inside and from the server for the outside. We then used the max, mean, medium, and min functions, but used np. from the NumPy library for the mean and medium values since they were not predetermined values, unlike max and min. Once we had each value, we used matplotlib’s plt.axhline() function to plot each line. The reason for using this function is to make the lines all horizontal, which would make it easier for the client to understand each value since they are consistent throughout the graph.
+```.py
+plt.style.use('ggplot')
+fig = plt.figure(figsize=(8, 10))
+plt.subplot(4, 1, 1)
+plt.plot(x_smooth, room_hum_smooth, color="blue")
+# maximum, minimum, mean
+plt.axhline(y=max(room_hum_smooth), color="red", label="maximum")
+plt.axhline(y=min(room_hum_smooth), color="lime", label="minimum")
+plt.axhline(y=np.mean(room_hum_smooth), color="yellow", label="mean")
+plt.axhline(y=np.median(room_hum_smooth), color="hotpink", label="median")
+plt.title("Room humidity")
+plt.ylabel("Humidity levels(%)")
+plt.tick_params('x', labelbottom=False)
+plt.legend(bbox_to_anchor=(0,1.12,1,0.2), loc='lower left', mode="expand", ncol=3)
+
+# room temperature
+plt.subplot(4, 1, 2)
+plt.plot(x_smooth, room_temp_smooth, color="blue")
+# maximum, minimum, mean
+plt.axhline(y=max(room_temp_smooth), color="red")
+plt.axhline(y=min(room_temp_smooth), color="lime")
+plt.axhline(y=np.mean(room_temp_smooth), color="yellow")
+plt.axhline(y=np.median(room_temp_smooth), color="hotpink")
+plt.title("Room temperature")
+plt.ylabel("Temperature levels(°C)")
+plt.tick_params('x', labelbottom=False)
+```
+<sub> Fig() shows the graphing code for data inside the room
+
+```.py
+# outside humidity
+plt.subplot(4, 1, 3)
+plt.plot(x_smooth2, outside_hum_smooth, color="blue")
+# maximum, minimum, mean
+plt.axhline(y=max(outside_hum_smooth), color="red")
+plt.axhline(y=min(outside_hum_smooth), color="lime")
+plt.axhline(y=np.mean(outside_hum_smooth), color="yellow")
+plt.axhline(y=np.median(outside_hum_smooth), color="hotpink")
+plt.title("Outside humidity")
+plt.ylabel("Humidity levels(%)")
+plt.tick_params('x', labelbottom=False)
+
+# outside temperature
+plt.subplot(4, 1, 4)
+plt.plot(x_smooth1, outside_temp_smooth, color="blue")
+# maximum, minimum, mean
+plt.axhline(y=max(outside_temp_smooth), color="red")
+plt.axhline(y=min(outside_temp_smooth), color="lime")
+plt.axhline(y=np.mean(outside_temp_smooth), color="yellow")
+plt.axhline(y=np.median(outside_temp_smooth), color="hotpink")
+plt.title("Outside temperature")
+plt.ylabel("Temperature levels(°C)")
+plt.xlabel("Measures")
+```
+
+<sub> Fig() shows the graphing code for data outside
+
+The CT skill used was pattern recognition because most of the codes were repetitive and only required a variable change to function for other elements. This has made our time coding much more efficient and simple, and it has given us more time to focus on other aspects of the project to ensure it is perfect.
+
+<img width="476" alt="Screen Shot 2565-12-14 at 01 25 12" src="https://user-images.githubusercontent.com/111941936/207388413-29ca6771-dda7-445d-9145-b39d59ec6901.png">
+
+<sub> Fig() shows the graphs
 
 ## Development
     

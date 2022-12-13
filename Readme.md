@@ -252,7 +252,7 @@ plt.plot(x, data_4, color="blue")
 plt.title("Outside humidity")
 plt.ylabel("Humidity levels(%)")
 plt.tick_params('x', labelbottom=False)
-    ```
+```
     
 <sub> Fig() shows the plotting of the raw data for humidity measured outside
     
@@ -263,9 +263,16 @@ plt.tick_params('x', labelbottom=False)
         if i['sensor_id'] == id and i['id'] > 38820 and i['id'] < 53070:
             data.append(i['value'])
     return data
-    ```
+```
+ 
+<sub> Fig() shows the function used to get the data from the sensor for the needed period of time                                                                                                                                               
+![](raw.png)
+                                                                        
+                                                                        
+<sub> Fig() shows the graph of the raw data collected both inside an outside
+    
 
-<sub> Fig() shows the function used to get the data from the sensor for the needed period of time
+    
 
 ## 2. The solution provides mathematical modelling for the Humidity and Temperature levels for each Local and Remote location. (SL: linear model)
 
@@ -300,6 +307,7 @@ y_model1 = []
 for i in x_model1:
     y_model1.append(m1 * i + b1)
 ```
+    
 <sub>Fig() shows the linear equation model which was copied and pasted for the temperature and humidity function but the variables were altered accordingly.
     
 <img width="684" alt="Screen Shot 2565-12-14 at 00 08 10" src="https://user-images.githubusercontent.com/111941936/207369896-fbc4f12d-bcde-4af9-98e9-ed3bd6f6316b.png">

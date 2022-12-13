@@ -183,77 +183,54 @@ Shows the format in which we stored data in the csv file
 4. Serial
 5. pyfirmata
 6. csv
-7. time                                                                        
-                                                                        
-## 1. Visual representation of the Humidity and Temperature values inside a dormitory and outside the house for 48 hours 
+7. time   
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-# NO    
-    
-## The solution that provides a visual representation of the Humidity and Temperature values inside a dormitory (Local) and outside the house (Remote) for a period of minimum 48 hours.
+## Computional Thinking
+1. Decompostion
+2. Pattern Recognition
+3. Algorithms
+4. Abstraction    
+                                                                            
+## 1. The solution that provides a visual representation of the Humidity and Temperature values inside a dormitory (Local) and outside the house (Remote) for a period of minimum 48 hours
 
-Client requested a visual display of the data collected in the period of 48 hours choosen. Visual repersentation of the collected data will help client easily see how and to what extent weather outside effects humidity and temperature inside the dormitory.
+Using matplot.lib, we were able to visually display the average temperature and humidity in the room and outside over the course of 48 hours. Outside readings will be visually compared in a graph with the mean of the readings inside the dorm.
+    
+This visual repersentation of the collected data will help client easily see how and to what extent weather outside effects humidity and temperature inside the dormitory to be able to determine the safeness for their health.
 
-![](raw_graph.png)
-
-**Fig.3** Shows the visual representation of the raw data for humidity and temperature for both inside and outside of the dormitory
-
-## The solution provides a mathematical modelling for the Humidity and Temperature levels for each Local and Remote locations
-
-Client requested a smoothed version of visual display of data collected with the linear line to provide the client with a rough estimate of the trend of the humidity and temperature.
-
-![](smooth_graph.png)
-
-For representing the linear model of our data we used linear polyfit function from numpy library.
+   
 ```.py
-# linear model
-m, b = np.polyfit(x_smooth, room_hum_smooth, 1)
-x_model = [1, 577]
-y_model = []
-for i in x_model:
-    y_model.append(m * i + b)
+# room temperature
+room_temp = []
+for temp_data in room_data:
+    temp_datas = temp_data.strip()
+    values = temp_datas.split(",")
+    temperature = float(values[1])
+    room_temp.append(temperature)
+# smoothing temperature data
+x_smooth, room_temp_smooth = smoothing(room_temp, 12)
 
-```
-**Fig.4** Code used to make the linear model
-
-## Minimum, maximum, madian and mean
-
-The program displays minimum, maimum, median and mean for the data collected in form of horizontal lines
-
-**Fig.5** The code above shows minimum, maimum, median and mean for the data collected
-EXAMPLES AFTER MEETING
-
-## Prediction the subsequent 12 hours for both temperature and humidity
-The client requested a prediction of the data collected for the subsequent 12 hours, we provided a solution to the client by using the polyfit function from the numpy library and appending the number of samples taken
-
-```.py
-
-# linear model
-m, b = np.polyfit(x_smooth, room_hum_smooth, 1)
-x_model = [1, 720]
-y_model = []
-for i in x_model:
-    y_model.append(m * i + b)
-```
+# room humidity
+room_hum = []
+for hum_data in room_data:
+    hum_datas = hum_data.strip()
+    values = hum_datas.split(",")
+    humidity = float(values[0])
+    room_hum.append(humidity)
+# smoothing humidity data
+x_smooth, room_hum_smooth = smoothing(room_hum, 12)    
+```  
 
 
 ## Development
+    
+    
 ## MVP (minimal viable product 'prototype')
-https://drive.google.com/file/d/1CdZhVE7wxouNFcLqTq6FZ73z6bevApU4/view?usp=share_link
+
+MVP Video: https://drive.google.com/file/d/1QD8DVMtiT9vOwBT-lIhoWpHpRAHvE1V9/view?usp=sharing
+    
+    
+    
+    
 # Criteria D: Functionality
 
 A 7 min video demonstrating the proposed solution with narration

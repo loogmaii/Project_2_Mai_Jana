@@ -1,12 +1,14 @@
 ![weather.png](https://github.com/loogmaii/Project_2_Mai_Jana/blob/main/pooooh.gif)
 
+<sub>Fig.1 show Winnie The Pooh Snow GIF from tenor.com
+
 # Unit 2: A Distributed Weather Station for ISAK
 
 ## Criteria A: Planning
 
 ## Problem definition
 
-It is December in UWC ISAK and Malcolm-San is starting to feel cold and sick. He suspects that the reason behind his cold is the change of humidity on campus. The reason behind his suspicion is that high humidity promotes the growth of mold which can cause respiratory issues [^1]. For that reason, he went to discuss with Mim-san who in fact denied his suspicions and said that it was just because his body is not adapting fast enough, since he is from Africa. To prove his point, he asked Jana and Mai to measure the temperature and humidity both inside and outside of the residences to store all the data in a graph - for everyone to be able to understand whether the humidity and temperature levels are healthy for the human body or not. From the results, it would be able to either confirm his suspicions or deny them. Finally, his last request is for them to make a poster to print out and hang up throughout the school.
+It is December in UWC ISAK and Our client is starting to feel cold and sick. He suspects that the reason behind his cold is the change of humidity on campus. The reason behind his suspicion is that high humidity promotes the growth of mold which can cause respiratory issues [^1]. For that reason, he went to discuss with a teacher who in fact denied his suspicions and said that it was just because his body is not adapting fast enough, since he is from Africa. To prove his point, he asked us to measure the temperature and humidity both inside and outside of the residences to store all the data in a graph. From the results, it would be able to either confirm his suspicions or deny them. Finally, his last request is for them to make a poster to print out and hang up throughout the school.
 
 ## Rationale for Proposed Solution
 
@@ -46,11 +48,13 @@ In order to inform the client whether the temperature and humidity levels are at
 
 <img width="1312" alt="Screen Shot 2565-11-23 at 20 50 59" src="https://user-images.githubusercontent.com/111941936/203539941-27027bea-087c-42ac-acce-91a826433803.png">
 
-**Fig.1** shows the system diagram for the proposed solution (**SL**). The indoor variables will be measured using an Arduino microprocessor and the sensor DHT11 conencted to the local computer (Laptop) located inside a room. The outdoor variables will be requested to the remote server using a GET request to the API of the server at ```192.168.6.147/readings```. The local values are stored in a CSV database locally.
+<sub>Fig.2 shows the system diagram for the proposed solution (**SL**). 
+    
+The indoor variables will be measured using an Arduino microprocessor and the sensor DHT11 conencted to the local computer (Laptop) located inside a room. The outdoor variables will be requested to the remote server using a GET request to the API of the server at ```192.168.6.147/readings```. The local values are stored in a CSV database locally.
 
 <img width="1440" alt="Screen Shot 2565-12-13 at 13 44 00" src="https://user-images.githubusercontent.com/111941936/207228702-ac430a05-cff4-4092-a52c-792fb17f0b8e.png">
 
-**Fig.2** shows the system diagram produced by our group (**SL**)
+<sub>Fig.3 shows the system diagram produced by our group (**SL**)
 
 ## List of Materials
 
@@ -63,17 +67,17 @@ In order to inform the client whether the temperature and humidity levels are at
 
 ## Flow diagrams
 
-![IMG_9D3C538F83A9-1](https://user-images.githubusercontent.com/111941936/207249628-9131d81e-9a4c-41b8-bf97-48be45427498.jpeg)
+![IMG_823467E2E055-1](https://user-images.githubusercontent.com/111941936/207287559-9b7eb6ee-d6ae-4b20-b208-5f86613ebe24.jpeg)
 
-fig() shows flow diagram for plotting the graph for smoothed temperature graph (inside)
+<sub>Fig.4 shows flow diagram for plotting the graph for smoothed temperature graph (inside)
 
-![IMG_7486BADE4991-1](https://user-images.githubusercontent.com/111941936/207249639-8c562c53-69dd-4286-bcb0-cd314700e3a4.jpeg)
+![IMG_F349418D5BD2-1](https://user-images.githubusercontent.com/111941936/207287696-a5edaa54-a4fb-460d-af69-3b53d58b1a72.jpeg)
 
-fig() shows flow diagram for the get sensor reading function from the library
+<sub>Fig.5 shows flow diagram for the get sensor reading function from the library
 
-![IMG_B673215BFEE8-1](https://user-images.githubusercontent.com/111941936/207249645-b4d00747-2a39-4b94-a4d7-c42413c50805.jpeg)
+![IMG_4F56DE1D8EEB-1](https://user-images.githubusercontent.com/111941936/207287751-cb710c99-8323-4639-91cf-fa99952395a4.jpeg)
 
-fig() shows flow diagram for retrieving data from the DHT11 sensor
+<sub>Fig.6 shows flow diagram for retrieving data from the DHT11 sensor
 
 ## Record of Tasks
 
@@ -154,7 +158,31 @@ Shows the format in which we stored data in the csv file
 **Fig.2** Shows the csv file in which we collected the data from the outside of the house
 
 # Criteria C: Development
-
+                                                                      
+## Techniques used
+1. Variables
+2. Functions
+3. For loops
+4. While loops
+5. If statement
+6. Datetime   
+7. Lists
+8. File reading
+9. Writing in a csv file
+10. Plotting graph 
+ 
+## Libraries used                                                                       1. Matplotlib
+2. NumPy
+3. Requests
+4. Serial
+5. pyfirmata
+6. csv
+7. time                                                                        
+                                                                        
+## Computational thinking
+                                                                        
+                                                                        
+                                                                        
 ## The solution that provides a visual representation of the Humidity and Temperature values inside a dormitory (Local) and outside the house (Remote) for a period of minimum 48 hours.
 
 Client requested a visual display of the data collected in the period of 48 hours choosen. Visual repersentation of the collected data will help client easily see how and to what extent weather outside effects humidity and temperature inside the dormitory.

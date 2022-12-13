@@ -104,7 +104,20 @@ Data consisting of the humidity and temperature levels every 5 minutes during th
 
 **Outside data**
 
+<img width="1351" alt="Screen Shot 2565-12-13 at 12 06 44" src="https://user-images.githubusercontent.com/111941936/207216625-adbbecfc-3f4f-4b57-8a20-2d77a5de15ac.png">
+
 **Inside data**
+
+```
+   with open("data.csv","a") as file:
+            dt_string = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+            file.write(f"{hum},{tem},{dt_string}\n")
+
+        data["hum"].append(hum)
+        data["tem"].append(tem)
+
+    print(data)
+```
 
 # Criteria C: Development
 

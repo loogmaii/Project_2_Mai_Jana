@@ -50,11 +50,12 @@ In order to inform the client whether the temperature and humidity levels are at
 
 ## List of Materials
 
-1. Arduino microprocessor x 1
-2. Sensor DHT11 x 1
-3. Computer x 1
-4. Extension chord x 1
-
+| Material               | Quantity |
+|------------------------|----------|
+| Arduino microprocessor | 1        |
+| Sensor DHT11           | 1        |
+| Computer               | 1        |
+| Extension chord        | 1        |
 
 
 ## Record of Tasks
@@ -96,6 +97,14 @@ In order to inform the client whether the temperature and humidity levels are at
 | Non-Functional: Performance Testing | Testing code's frequency of printing out and appending the inside data every 5 minutes for 48 consecutive hours                                                                              | 1. Run the code  2. Check the output as well as whether it is stored in the CSV file or not 3. Check the CSV file ocationally whether the data is up to speed with no stop in between it's entirety of running                                                                                                                                                                                                                                            | The data recorded should end up being in the format of "humidity, temperature, DD/MM/YYYY HH: MM: SS" as well as having the data appended.                                                                                                                                                                                                                                                                                                                                                                                         |
 | Non-Functional: Usability Testing   | Requested outdoor variables from the remote server to be input into making both a smoothed-out and raw graph as well as including the mean, standard deviation, minimum, maximum, and median | 1. The MacBook Air is connected to the ISAK-S WIFI 2. Run the code 3. The outdoor variables requested by the remote server 4. Variables are received in a form that can be implemented into a graph: numbers 5. The data is plotted using the library matplotlib as well as formulas for different mathematical comparative analysis 6. Graphs are produced with corresponding lines to either the mean, standard deviation, minimum, maximum, and median | The graphs are smoothed-out with clear labels and representation of each mathematical comparative analysis. This would help the client grasp a clearer understanding of the levels of the data, which alongside the knowledge of what is the healthy level of temperature and humidity, and help them determine whether campus is a healthy place to live in or not.                                                                                                                                                               |
 | Non-Functional: Usability Testing   | The scientific poster produced contains all the necessary data to satisfy the client's request and success criteria                                                                          | 1. Required information collected(graphs, material list, methods, etc.) 2. Elements are clearly arranged and simplistic 3. The title should be clear, succinct, and by far the largest text on the poster                                                                                                                                                                                                                                                 | The scientific poster clearly illustrated a summary of research as well as provided all necessary information in a clear and precise format that the client could easily understand.                                                                                                                                                                                                                                                                                                                                               |
+
+##  How the data is stored
+
+Data consisting of the humidity and temperature levels every 5 minutes during the 48-hour period when the recording was done was both recorded in a csv file for inside a dormitory (Local) and requested from the server for outside the house (remotely).
+
+**Outside data**
+
+**Inside data**
 
 # Criteria C: Development
 

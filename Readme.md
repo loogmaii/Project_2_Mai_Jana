@@ -276,6 +276,8 @@ MVP Video: https://drive.google.com/file/d/1QD8DVMtiT9vOwBT-lIhoWpHpRAHvE1V9/vie
 # Criteria D: Functionality
 
 ## A 7 min video demonstrating the proposed solution with narration
+
+https://drive.google.com/drive/folders/12_nziDAX3EzcCMkqJEhPvISLTxHoaoyV?usp=sharing 
     
 ## Scientific Poster
     

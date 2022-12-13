@@ -191,23 +191,12 @@ Shows the format in which we stored data in the csv file
 3. Algorithms
 4. Abstraction    
                                                                             
-## 1. The solution that provides a visual representation of the Humidity and Temperature values inside a dormitory (Local) and outside the house (Remote) for a period of minimum 48 hours
-
-Using matplot.lib, we were able to visually display the average temperature and humidity in the room and outside over the course of 48 hours. Outside readings will be visually compared in a graph with the mean of the readings inside the dorm.
-    
-This visual repersentation of the collected data will help client easily see how and to what extent weather outside effects humidity and temperature inside the dormitory to be able to determine the safeness for their health.
-
+## 1. The solution provides a visual representation of the Humidity and Temperature values inside a dormitory (Local) and outside the house (Remote) for a period of a minimum of 48 hours.
    
-```.py
-# room temperature
-room_temp = []
-for temp_data in room_data:
-    temp_datas = temp_data.strip()
-    values = temp_datas.split(",")
-    temperature = float(values[1])
-    room_temp.append(temperature)
-# smoothing temperature data
-x_smooth, room_temp_smooth = smoothing(room_temp, 12)
+```.py  
+ # reading file lines
+with open("data.csv", "r") as file:
+    room_data = file.readlines()
 
 # room humidity
 room_hum = []
@@ -216,9 +205,24 @@ for hum_data in room_data:
     values = hum_datas.split(",")
     humidity = float(values[0])
     room_hum.append(humidity)
-# smoothing humidity data
-x_smooth, room_hum_smooth = smoothing(room_hum, 12)    
-```  
+
+x_values = []
+for i in range(len(room_hum)):
+    x_values.append(i)
+
+# plotting graph
+plt.style.use('ggplot')
+# humidity
+fig = plt.figure(figsize=(10,10))
+plt.subplot(4, 1, 1)
+plt.plot(x_values, room_hum, color="blue")
+plt.title("Room humidity")
+plt.ylabel("Humidity levels (%)")
+plt.tick_params('x', labelbottom=False)
+```
+<sub>Fig() shows the plotting of the raw data for humidity measured inside the dormitory
+
+This code gets the data by opening the data.csv file and reading the values stored in it. Data is later appended to the list, from which we just take the specific values that we need (in this specific case it is humidity measured inside the dormitory). By using matplot.lib we have visually presented the data in a way in which the client will be able to see more easily changes in the temperature and humidity during the day. 
 
 ## 2. The solution provides mathematical modelling for the Humidity and Temperature levels for each Local and Remote location. (SL: linear model)
 

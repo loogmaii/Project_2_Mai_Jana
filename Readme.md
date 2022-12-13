@@ -193,6 +193,15 @@ Shows the format in which we stored data in the csv file
                                                                             
 ## 1. The solution provides a visual representation of the Humidity and Temperature values inside a dormitory (Local) and outside the house (Remote) for a period of a minimum of 48 hours.
    
+By using matplot.lib and plt.plot we have visually presented the data in a way in which the client will be able to easily see changes in the temperature and humidity during the day. 
+    
+This visual representation of the collected data will help the client easily see how and to what extent weather outside affects humidity and temperature inside the dormitory to be able to determine the safety of their health. With the help of all these aspects, we have provided a dependable response to the request expressed in the client's criteria number 1.
+    
+From computational thinking’s element decomposition, we broke up the plotting of the graph into two different sections of the code. The depiction of the humidity values taken inside and outside during a 48-hour period is plotted in figure () and ().
+    
+In order to match the time of the samples measured inside and outside we used the function shown in figure() which checks the id of the reading and matches with the time of the samples taken in the room.
+    
+      
 ```.py  
  # reading file lines
 with open("data.csv", "r") as file:
@@ -222,7 +231,41 @@ plt.tick_params('x', labelbottom=False)
 ```
 <sub>Fig() shows the plotting of the raw data for humidity measured inside the dormitory
 
-This code gets the data by opening the data.csv file and reading the values stored in it. Data is later appended to the list, from which we just take the specific values that we need (in this specific case it is humidity measured inside the dormitory). By using matplot.lib we have visually presented the data in a way in which the client will be able to see more easily changes in the temperature and humidity during the day. 
+```.py
+    # raw data for Remote locations
+
+readings = download_data()
+
+data_4 = get_sensor(readings, 4)
+data_5 = get_sensor(readings, 5)
+
+data_4 = data_4[0:576]
+data_5 = data_5[0:576]
+
+#plotting the data
+x = []
+for i in range(576):
+    x.append(i)
+
+plt.subplot(4, 1, 3)
+plt.plot(x, data_4, color="blue")
+plt.title("Outside humidity")
+plt.ylabel("Humidity levels(%)")
+plt.tick_params('x', labelbottom=False)
+    ```
+    
+<sub> Fig() shows the plotting of the raw data for humidity measured outside
+    
+```.py
+    def get_sensor(readings: list, id: int) -> list:
+    data = []
+    for i in readings:
+        if i['sensor_id'] == id and i['id'] > 38820 and i['id'] < 53070:
+            data.append(i['value'])
+    return data
+    ```
+
+<sub> Fig() shows the function used to get the data from the sensor for the needed period of time
 
 ## 2. The solution provides mathematical modelling for the Humidity and Temperature levels for each Local and Remote location. (SL: linear model)
 

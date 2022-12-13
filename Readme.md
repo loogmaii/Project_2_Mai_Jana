@@ -61,6 +61,19 @@ In order to inform the client whether the temperature and humidity levels are at
 | Computer               | 1        |
 | Extension chord        | 1        |
 
+## Flow diagrams
+
+![IMG_9D3C538F83A9-1](https://user-images.githubusercontent.com/111941936/207249628-9131d81e-9a4c-41b8-bf97-48be45427498.jpeg)
+
+fig() shows flow diagram for plotting the graph for smoothed temperature graph (inside)
+
+![IMG_7486BADE4991-1](https://user-images.githubusercontent.com/111941936/207249639-8c562c53-69dd-4286-bcb0-cd314700e3a4.jpeg)
+
+fig() shows flow diagram for the get sensor reading function from the library
+
+![IMG_B673215BFEE8-1](https://user-images.githubusercontent.com/111941936/207249645-b4d00747-2a39-4b94-a4d7-c42413c50805.jpeg)
+
+fig() shows flow diagram for retrieving data from the DHT11 sensor
 
 ## Record of Tasks
 
@@ -147,6 +160,7 @@ Shows the format in which we stored data in the csv file
 Client requested a visual display of the data collected in the period of 48 hours choosen. Visual repersentation of the collected data will help client easily see how and to what extent weather outside effects humidity and temperature inside the dormitory.
 
 ![](raw_graph.png)
+
 **Fig.3** Shows the visual representation of the raw data for humidity and temperature for both inside and outside of the dormitory
 
 ## List of techniques used

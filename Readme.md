@@ -310,7 +310,7 @@ for i in x_model1:
     
 <sub>Fig() shows the linear equation model which was copied and pasted for the temperature and humidity function but the variables were altered accordingly.
     
-<img width="684" alt="Screen Shot 2565-12-14 at 00 08 10" src="https://user-images.githubusercontent.com/111941936/207369896-fbc4f12d-bcde-4af9-98e9-ed3bd6f6316b.png">
+![](smooth.png)
 
 <sub>Fig() shows the graphs  for both the smoothed out line(Blue) and linear line (Red)
 
@@ -378,7 +378,7 @@ plt.xlabel("Measures")
 
 The CT skill used was pattern recognition because most of the codes were repetitive and only required a variable change to function for other elements. This has made our time coding much more efficient and simple, and it has given us more time to focus on other aspects of the project to ensure it is perfect.
 
-<img width="476" alt="Screen Shot 2565-12-14 at 01 25 12" src="https://user-images.githubusercontent.com/111941936/207388413-29ca6771-dda7-445d-9145-b39d59ec6901.png">
+![](min.png)
 
 <sub> Fig() shows the graphs
     

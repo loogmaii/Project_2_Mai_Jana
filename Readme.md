@@ -125,8 +125,10 @@ Data consisting of the humidity and temperature levels every 5 minutes during th
 
 **Outside data**
 
+<img width="1432" alt="Screen Shot 2565-12-13 at 19 35 35" src="https://user-images.githubusercontent.com/111941936/207295060-0c16350d-2ab4-405a-844c-7713d5a68c30.png">
 
-<img width="1351" alt="Screen Shot 2565-12-13 at 12 06 44" src="https://user-images.githubusercontent.com/111941936/207216625-adbbecfc-3f4f-4b57-8a20-2d77a5de15ac.png">
+<sub>Fig.7 shows variables requested from the remote server using a GET request to the API of the server at ```192.168.6.147/readings``
+
 
 ```.py
 def get_sensor(readings: list, id: int) -> list:
@@ -137,7 +139,7 @@ def get_sensor(readings: list, id: int) -> list:
     return data
 ```
 
-**Fig.1** Shows the function used to only acquire the data apropriate for the needed time period.
+<sub>Fig.8 Shows the function used to only acquire the data apropriate for the needed time period.
 
 **Inside data**
 Shows the format in which we stored data in the csv file
@@ -153,9 +155,11 @@ Shows the format in which we stored data in the csv file
     print(data)
 ```
 
+<sub>Fig.9 Shows the program that opens the CSV file to store the recorded data
+
 ![](data.png)
 
-**Fig.2** Shows the csv file in which we collected the data from the outside of the house
+<sub>Fig.10 Shows the csv file in which we collected the data from the outside of the house
 
 # Criteria C: Development
                                                                       

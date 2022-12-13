@@ -386,7 +386,8 @@ The CT skill used was pattern recognition because most of the codes were repetit
 
 In order to go beyond knowing what has happened to provide the best assessment of what will happen in the future we provided the visual representation of the subsequent 12 hours for the data collected. We used numpy library and polyfit function, which we also previously used when we were plotting linear models for the smoothed version of the data. The difference is that we appended the range of the samples and divided the prediction and the actual linear model by vertical line so the client can easily distinguish between these two. 
     
-
+![](prediction.png)
+<sub> Fig () shows the prediction of the data for the subsequent 12 hours   
 ## Development
     
     

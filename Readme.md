@@ -104,11 +104,21 @@ Data consisting of the humidity and temperature levels every 5 minutes during th
 
 **Outside data**
 
+
 <img width="1351" alt="Screen Shot 2565-12-13 at 12 06 44" src="https://user-images.githubusercontent.com/111941936/207216625-adbbecfc-3f4f-4b57-8a20-2d77a5de15ac.png">
+
+```.py
+def get_sensor(readings: list, id: int) -> list:
+    data = []
+    for i in readings:
+        if i['sensor_id'] == id and i['id'] > 38820 and i['id'] < 53070:
+            data.append(i['value'])
+    return data
+```
 
 **Inside data**
 
-```
+```.py
    with open("data.csv","a") as file:
             dt_string = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
             file.write(f"{hum},{tem},{dt_string}\n")
@@ -118,6 +128,7 @@ Data consisting of the humidity and temperature levels every 5 minutes during th
 
     print(data)
 ```
+**Fig.6** Shows the function used to only acquire the data apropriate for the needed time period.
 ![](data.png)
 
 # Criteria C: Development

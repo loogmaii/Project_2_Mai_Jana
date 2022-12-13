@@ -117,7 +117,9 @@ def get_sensor(readings: list, id: int) -> list:
 ```
 
 **Fig.1** Shows the function used to only acquire the data apropriate for the needed time period.
+
 **Inside data**
+Shows the format in which we stored data in the csv file
 
 ```.py
    with open("data.csv","a") as file:
@@ -131,7 +133,9 @@ def get_sensor(readings: list, id: int) -> list:
 ```
 
 ![](data.png)
+
 **Fig.2** Shows the csv file in which we collected the data from the outside of the house
+
 # Criteria C: Development
 
 ## List of techniques used

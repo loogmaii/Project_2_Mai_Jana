@@ -381,6 +381,11 @@ The CT skill used was pattern recognition because most of the codes were repetit
 <img width="476" alt="Screen Shot 2565-12-14 at 01 25 12" src="https://user-images.githubusercontent.com/111941936/207388413-29ca6771-dda7-445d-9145-b39d59ec6901.png">
 
 <sub> Fig() shows the graphs
+    
+## Create a prediction the subsequent 12 hours for both temperature and humidity.
+
+In order to go beyond knowing what has happened to provide the best assessment of what will happen in the future we provided the visual representation of the subsequent 12 hours for the data collected. We used numpy library and polyfit function, which we also previously used when we were plotting linear models for the smoothed version of the data. The difference is that we appended the range of the samples and divided the prediction and the actual linear model by vertical line so the client can easily distinguish between these two. 
+    
 
 ## Development
     

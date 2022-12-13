@@ -138,6 +138,12 @@ Shows the format in which we stored data in the csv file
 
 # Criteria C: Development
 
+## The solution that provides a visual representation of the Humidity and Temperature values inside a dormitory (Local) and outside the house (Remote) for a period of minimum 48 hours.
+
+Client requested a visual display of the data collected in the period of 48 hours choosen. Visual repersentation of the collected data will help client easily see how and to what extent weather outside effects humidity and temperature inside the dormitory.
+
+
+
 ## List of techniques used
 
 ## Development

@@ -233,4 +233,9 @@ MVP Video: https://drive.google.com/file/d/1QD8DVMtiT9vOwBT-lIhoWpHpRAHvE1V9/vie
     
 # Criteria D: Functionality
 
-A 7 min video demonstrating the proposed solution with narration
+## A 7 min video demonstrating the proposed solution with narration
+    
+## Scientific Poster
+    
+![A Distributed Weather Station for ISAK](https://user-images.githubusercontent.com/111941936/207347368-d3fb75b0-3d71-4f48-bb2c-75cd34ce6ffc.png)
+    

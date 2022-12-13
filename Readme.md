@@ -184,12 +184,7 @@ Shows the format in which we stored data in the csv file
 5. pyfirmata
 6. csv
 7. time   
-    
-## Computional Thinking
-1. Decompostion
-2. Pattern Recognition
-3. Algorithms
-4. Abstraction    
+      
                                                                             
 ## 1. The solution provides a visual representation of the Humidity and Temperature values inside a dormitory (Local) and outside the house (Remote) for a period of a minimum of 48 hours.
    
@@ -229,7 +224,7 @@ plt.title("Room humidity")
 plt.ylabel("Humidity levels (%)")
 plt.tick_params('x', labelbottom=False)
 ```
-<sub>Fig() shows the plotting of the raw data for humidity measured inside the dormitory
+<sub>Fig11 shows the plotting of the raw data for humidity measured inside the dormitory
 
 ```.py
     # raw data for Remote locations
@@ -254,7 +249,7 @@ plt.ylabel("Humidity levels(%)")
 plt.tick_params('x', labelbottom=False)
 ```
     
-<sub> Fig() shows the plotting of the raw data for humidity measured outside
+<sub> Fig.12 shows the plotting of the raw data for humidity measured outside
     
 ```.py
     def get_sensor(readings: list, id: int) -> list:
@@ -265,14 +260,12 @@ plt.tick_params('x', labelbottom=False)
     return data
 ```
  
-<sub> Fig() shows the function used to get the data from the sensor for the needed period of time                                                                                                                                               
+<sub> Fig.13 shows the function used to get the data from the sensor for the needed period of time                                                                                                                                               
 ![](raw.png)
                                                                         
                                                                         
-<sub> Fig() shows the graph of the raw data collected both inside an outside
-    
-
-    
+<sub> Fig.14 shows the graph of the raw data collected both inside an outside
+        
 
 ## 2. The solution provides mathematical modelling for the Humidity and Temperature levels for each Local and Remote location. (SL: linear model)
 
@@ -289,7 +282,7 @@ def smoothing(data: list, size_window: int = 12):
         x.append(i)
     return x, data_smooth
 ```
-<sub>Fig() shows the function ‘smoothing’
+<sub>Fig.15 shows the function ‘smoothing’
 
 After smoothing the data and plotting it by using matplotlib: plt.plot, we defined the linear model to be able to be plotted alongside the smoothed-out graph. From computational thinking’s element of pattern recognition, we noticed that the linear model code for each data could be repeated, as long as we change the variable’s name accordingly. This means that we won’t have to come up with a new code, we would just need to copy and paste to then alter the variable name. After that, we plotted the linear line alongside the smoothed-out data line.
 
@@ -308,17 +301,18 @@ for i in x_model1:
     y_model1.append(m1 * i + b1)
 ```
     
-<sub>Fig() shows the linear equation model which was copied and pasted for the temperature and humidity function but the variables were altered accordingly.
+<sub>Fig.16 shows the linear equation model which was copied and pasted for the temperature and humidity function but the variables were altered accordingly.
     
 ![](smooth.png)
 
-<sub>Fig() shows the graphs  for both the smoothed out line(Blue) and linear line (Red)
+<sub>Fig.17 shows the graphs  for both the smoothed out line(Blue) and linear line (Red)
 
 ## 3. The solution provides a comparative analysis of the Humidity and Temperature levels for each Local and Remote location including mean, standard deviation, minimum, maximum, and median.
 
 Comparative analysis facilitates a deeper comprehension of the problem and assists in formulating solutions. We made the decision to create additional line equations, one for each value, to be added to the smoothed-out data graph in order to satisfy the client with regard to this condition. This would help the client understand the differences and similarities in temperature and humidity levels between each local and remote location.
 
 Like we did for the previous graphs, we requested the data from the CSV file for the inside and from the server for the outside. We then used the max, mean, medium, and min functions, but used np. from the NumPy library for the mean and medium values since they were not predetermined values, unlike max and min. Once we had each value, we used matplotlib’s plt.axhline() function to plot each line. The reason for using this function is to make the lines all horizontal, which would make it easier for the client to understand each value since they are consistent throughout the graph.
+    
 ```.py
 plt.style.use('ggplot')
 fig = plt.figure(figsize=(8, 10))
@@ -346,7 +340,7 @@ plt.title("Room temperature")
 plt.ylabel("Temperature levels(°C)")
 plt.tick_params('x', labelbottom=False)
 ```
-<sub> Fig() shows the graphing code for data inside the room
+<sub> Fig.18 shows the graphing code for data from inside the room's mean, minimum, maximum, and median.
 
 ```.py
 # outside humidity
@@ -374,28 +368,49 @@ plt.ylabel("Temperature levels(°C)")
 plt.xlabel("Measures")
 ```
 
-<sub> Fig() shows the graphing code for data outside
+<sub> Fig.19 shows the graphing code for data from outside's  mean, minimum, maximum, and median.
 
 The CT skill used was pattern recognition because most of the codes were repetitive and only required a variable change to function for other elements. This has made our time coding much more efficient and simple, and it has given us more time to focus on other aspects of the project to ensure it is perfect.
 
 ![](min.png)
 
-<sub> Fig() shows the graphs
+<sub> Fig.20 shows the graphs of mean, standard deviation, minimum, maximum, and median.
+    
+As for the standard deviation, we decided to separate it from the other values and add it to a separate set of graphs with the smooth-out data. This is because we were afraid that if too many lines, the graph would become messy or hard to read. Same as the mean and median, we used np. from the NumPy library as well.
+
+```.py
+# room humidity
+plt.axhline(y=np.std(room_hum_smooth), color="blueviolet", label="standard deviation")
+
+
+# room temperature
+plt.axhline(y=np.std(room_temp_smooth), color="blueviolet")
+
+# outside humidity
+plt.axhline(y=np.std(outside_hum_smooth), color="purple")
+
+# outside temperature
+plt.axhline(y=np.std(outside_temp_smooth), color="purple")
+```
+<sub> Fig.21 shows the graphing code the standard deviation line
+
+    
+    
+<sub> Fig.22 shows the graph with standard deviation line
+
     
 ## Create a prediction the subsequent 12 hours for both temperature and humidity.
 
 In order to go beyond knowing what has happened to provide the best assessment of what will happen in the future we provided the visual representation of the subsequent 12 hours for the data collected. We used numpy library and polyfit function, which we also previously used when we were plotting linear models for the smoothed version of the data. The difference is that we appended the range of the samples and divided the prediction and the actual linear model by vertical line so the client can easily distinguish between these two. 
     
 ![](prediction.png)
-<sub> Fig () shows the prediction of the data for the subsequent 12 hours   
+<sub> Fig.23 shows the prediction of the data for the subsequent 12 hours   
 ## Development
     
     
 ## MVP (minimal viable product 'prototype')
 
 MVP Video: https://drive.google.com/file/d/1QD8DVMtiT9vOwBT-lIhoWpHpRAHvE1V9/view?usp=sharing
-    
-    
     
     
 # Criteria D: Functionality
@@ -407,4 +422,4 @@ https://drive.google.com/drive/folders/12_nziDAX3EzcCMkqJEhPvISLTxHoaoyV?usp=sha
 ## Scientific Poster
     
 ![A Distributed Weather Station for ISAK](https://user-images.githubusercontent.com/111941936/207347368-d3fb75b0-3d71-4f48-bb2c-75cd34ce6ffc.png)
-    
+<sub> Fig.24 shows the scientific poster

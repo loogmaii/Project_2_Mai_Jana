@@ -146,7 +146,8 @@ Shows the format in which we stored data in the csv file
 
 Client requested a visual display of the data collected in the period of 48 hours choosen. Visual repersentation of the collected data will help client easily see how and to what extent weather outside effects humidity and temperature inside the dormitory.
 
-
+![](raw_graph.png)
+**Fig.3** Shows the visual representation of the raw data for humidity and temperature for both inside and outside of the dormitory
 
 ## List of techniques used
 

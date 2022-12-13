@@ -118,6 +118,7 @@ Data consisting of the humidity and temperature levels every 5 minutes during th
 
     print(data)
 ```
+!()[data.png]
 
 # Criteria C: Development
 

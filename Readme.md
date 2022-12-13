@@ -181,7 +181,25 @@ for i in x_model:
 ```
 **Fig.4** Code used to make the linear model
 
-## Minimum, maximum, 
+## Minimum, maximum, madian and mean
+
+The program displays minimum, maimum, median and mean for the data collected in form of horizontal lines
+
+**Fig.5** The code above shows minimum, maimum, median and mean for the data collected
+EXAMPLES AFTER MEETING
+
+## Prediction the subsequent 12 hours for both temperature and humidity
+The client requested a prediction of the data collected for the subsequent 12 hours, we provided a solution to the client by using the polyfit function from the numpy library and appending the number of samples taken
+
+```.py
+
+# linear model
+m, b = np.polyfit(x_smooth, room_hum_smooth, 1)
+x_model = [1, 720]
+y_model = []
+for i in x_model:
+    y_model.append(m * i + b)
+```
 
 ## List of techniques used
 

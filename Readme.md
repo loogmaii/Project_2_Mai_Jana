@@ -163,6 +163,26 @@ Client requested a visual display of the data collected in the period of 48 hour
 
 **Fig.3** Shows the visual representation of the raw data for humidity and temperature for both inside and outside of the dormitory
 
+## The solution provides a mathematical modelling for the Humidity and Temperature levels for each Local and Remote locations
+
+Client requested a smoothed version of visual display of data collected with the linear line to provide the client with a rough estimate of the trend of the humidity and temperature.
+
+![](smooth_graph.png)
+
+For representing the linear model of our data we used linear polyfit function from numpy library.
+```.py
+# linear model
+m, b = np.polyfit(x_smooth, room_hum_smooth, 1)
+x_model = [1, 577]
+y_model = []
+for i in x_model:
+    y_model.append(m * i + b)
+
+```
+**Fig.4** Code used to make the linear model
+
+## Minimum, maximum, 
+
 ## List of techniques used
 
 ## Development

@@ -220,6 +220,44 @@ for hum_data in room_data:
 x_smooth, room_hum_smooth = smoothing(room_hum, 12)    
 ```  
 
+## 2. The solution provides mathematical modelling for the Humidity and Temperature levels for each Local and Remote location. (SL: linear model)
+
+Linear models describe a continuous response variable as a function of one or more predictor variables. They can help the client understand and predict the behaviour of complex systems or analyze data. To fulfil this criterion, we imported the function smoothing from the lib.py file in order to make the graph clear and visually pleasing. 
+
+```.py
+def smoothing(data: list, size_window: int = 12):
+    data_smooth = []
+    x = []
+    for i in range(0, (len(data) - 6), size_window):
+        data_in_window = data[i:i + size_window]
+        average = sum(data_in_window) / size_window
+        data_smooth.append(average)
+        x.append(i)
+    return x, data_smooth
+```
+<sub>Fig() shows the function ‘smoothing’
+
+After smoothing the data and plotting it by using matplotlib: plt.plot, we defined the linear model to be able to be plotted alongside the smoothed-out graph. From computational thinking’s element of pattern recognition, we noticed that the linear model code for each data could be repeated, as long as we change the variable’s name accordingly. This means that we won’t have to come up with a new code, we would just need to copy and paste to then alter the variable name. After that, we plotted the linear line alongside the smoothed-out data line.
+
+```.py
+# linear model
+m, b = np.polyfit(x_smooth, room_hum_smooth, 1)
+x_model = [1, 577]
+y_model = []
+for i in x_model:
+    y_model.append(m * i + b)
+
+m1, b1 = np.polyfit(x_smooth, room_temp_smooth, 1)
+x_model1 = [1, 577]
+y_model1 = []
+for i in x_model1:
+    y_model1.append(m1 * i + b1)
+```
+<sub>Fig() shows the linear equation model which was copied and pasted for the temperature and humidity function but the variables were altered accordingly.
+    
+<img width="684" alt="Screen Shot 2565-12-14 at 00 08 10" src="https://user-images.githubusercontent.com/111941936/207369896-fbc4f12d-bcde-4af9-98e9-ed3bd6f6316b.png">
+
+<sub>Fig() shows the graphs  for both the smoothed out line(Blue) and linear line (Red)  
 
 ## Development
     

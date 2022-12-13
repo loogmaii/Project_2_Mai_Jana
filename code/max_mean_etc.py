@@ -57,7 +57,7 @@ plt.axhline(y=np.median(room_hum_smooth), color="hotpink", label="median")
 plt.title("Room humidity")
 plt.ylabel("Humidity levels(%)")
 plt.tick_params('x', labelbottom=False)
-plt.legend(bbox_to_anchor=(0,1.12,1,0.2), loc='lower left', mode="expand", ncol=3)
+plt.legend(bbox_to_anchor=(0,1.12,1,0.2), loc='lower left', mode="expand", ncol=3) [1^]
 
 # room temperature
 plt.subplot(4, 1, 2)
@@ -97,3 +97,7 @@ plt.xlabel("Measures")
 
 plt.show()
 ```
+
+[1^] pottigopi. “How to Put the Legend Outside the Plot.” Stack Overflow, 15 Jan. 2011, stackoverflow.com/questions/4700614/how-to-put-the-legend-outside-the-plot. Accessed 13 Dec. 2022.
+
+‌

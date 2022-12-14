@@ -8,7 +8,7 @@
 
 ## Problem definition
 
-It is December in UWC ISAK and Our client is starting to feel cold and sick. He suspects that the reason behind his cold is the change of humidity on campus. The reason behind his suspicion is that high humidity promotes the growth of mold which can cause respiratory issues [^1]. For that reason, he went to discuss with a teacher who in fact denied his suspicions and said that it was just because his body is not adapting fast enough, since he is from Africa. To prove his point, he asked us to measure the temperature and humidity both inside and outside of the residences to store all the data in a graph. From the results, it would be able to either confirm his suspicions or deny them. Finally, his last request is for us to make a poster to print out and hang up throughout the school.
+It is December in UWC ISAK and our client is starting to feel cold and sick. He suspects that the reason behind his cold is the change of humidity on campus. The reason behind his suspicion is that high humidity promotes the growth of mold which can cause respiratory issues [^1]. For that reason, he went to discuss with a teacher who in fact denied his suspicions and said that it was just because his body is not adapting fast enough, since he is from Africa. To prove his point, client asked us to measure the temperature and humidity both inside and outside of the residences, and to cisually represent all the data in a graph. From the results, it would be able to either confirm his suspicions or deny them. Finally, his last request is for us to make a poster to print out and hang up throughout the school.
 
 ## Rationale for Proposed Solution
 
@@ -192,11 +192,8 @@ By using matplot.lib and plt.plot we have visually presented the data in a way i
     
 This visual representation of the collected data will help the client easily see how and to what extent weather outside affects humidity and temperature inside the dormitory to be able to determine the safety of their health. With the help of all these aspects, we have provided a dependable response to the request expressed in the client's criteria number 1.
     
-From computational thinking’s element decomposition, we broke up the plotting of the graph into two different sections of the code. The depiction of the humidity values taken inside and outside during a 48-hour period is plotted in figure () and ().
-    
-In order to match the time of the samples measured inside and outside we used the function shown in figure() which checks the id of the reading and matches with the time of the samples taken in the room.
-    
-      
+From computational thinking’s element decomposition, we broke up the plotting of the graph into two different sections of the code. The depiction of the humidity values taken inside and outside during a 48-hour period is plotted in figure 11 and 12.
+          
 ```.py  
  # reading file lines
 with open("data.csv", "r") as file:
@@ -227,7 +224,7 @@ plt.tick_params('x', labelbottom=False)
 <sub>Fig11 shows the plotting of the raw data for humidity measured inside the dormitory
 
 ```.py
-    # raw data for Remote locations
+# raw data for Remote locations
 
 readings = download_data()
 
@@ -251,20 +248,10 @@ plt.tick_params('x', labelbottom=False)
     
 <sub> Fig.12 shows the plotting of the raw data for humidity measured outside
     
-```.py
-    def get_sensor(readings: list, id: int) -> list:
-    data = []
-    for i in readings:
-        if i['sensor_id'] == id and i['id'] > 38820 and i['id'] < 53070:
-            data.append(i['value'])
-    return data
-```
- 
-<sub> Fig.13 shows the function used to get the data from the sensor for the needed period of time                                                                                                                                               
 ![](raw.png)
                                                                         
                                                                         
-<sub> Fig.14 shows the graph of the raw data collected both inside an outside
+<sub> Fig.13 shows the graph of the raw data collected both inside an outside
         
 
 ## 2. The solution provides mathematical modelling for the Humidity and Temperature levels for each Local and Remote location. (SL: linear model)
@@ -282,7 +269,7 @@ def smoothing(data: list, size_window: int = 12):
         x.append(i)
     return x, data_smooth
 ```
-<sub>Fig.15 shows the function ‘smoothing’
+<sub>Fig.14 shows the function ‘smoothing’
 
 After smoothing the data and plotting it by using matplotlib: plt.plot, we defined the linear model to be able to be plotted alongside the smoothed-out graph. From computational thinking’s element of pattern recognition, we noticed that the linear model code for each data could be repeated, as long as we change the variable’s name accordingly. This means that we won’t have to come up with a new code, we would just need to copy and paste to then alter the variable name. After that, we plotted the linear line alongside the smoothed-out data line.
 
@@ -301,11 +288,11 @@ for i in x_model1:
     y_model1.append(m1 * i + b1)
 ```
     
-<sub>Fig.16 shows the linear equation model which was copied and pasted for the temperature and humidity function but the variables were altered accordingly.
+<sub>Fig.15 shows the linear equation model which was copied and pasted for the temperature and humidity function but the variables were altered accordingly.
     
 ![](smooth.png)
 
-<sub>Fig.17 shows the graphs  for both the smoothed out line(Blue) and linear line (Red)
+<sub>Fig.16 shows the graphs for both the smoothed out line(Blue) and linear line (Red)
 
 ## 3. The solution provides a comparative analysis of the Humidity and Temperature levels for each Local and Remote location including mean, standard deviation, minimum, maximum, and median.
 
@@ -340,7 +327,7 @@ plt.title("Room temperature")
 plt.ylabel("Temperature levels(°C)")
 plt.tick_params('x', labelbottom=False)
 ```
-<sub> Fig.18 shows the graphing code for data from inside the room's mean, minimum, maximum, and median.
+<sub> Fig.17 shows the graphing code for data from inside the room's mean, minimum, maximum, and median.
 
 ```.py
 # outside humidity
@@ -368,7 +355,7 @@ plt.ylabel("Temperature levels(°C)")
 plt.xlabel("Measures")
 ```
 
-<sub> Fig.19 shows the graphing code for data from outside's  mean, minimum, maximum, and median.
+<sub> Fig.18 shows the graphing code for data from outside's  mean, minimum, maximum, and median.
 
 The CT skill used was pattern recognition because most of the codes were repetitive and only required a variable change to function for other elements. This has made our time coding much more efficient and simple, and it has given us more time to focus on other aspects of the project to ensure it is perfect.
 
@@ -392,11 +379,11 @@ plt.axhline(y=np.std(outside_hum_smooth), color="purple")
 # outside temperature
 plt.axhline(y=np.std(outside_temp_smooth), color="purple")
 ```
-<sub> Fig.21 shows the graphing code the standard deviation line
+<sub> Fig.20 shows the graphing code the standard deviation line
 
     
     
-<sub> Fig.22 shows the graph with standard deviation line
+<sub> Fig.21 shows the graph with standard deviation line
 
     
 ## Create a prediction the subsequent 12 hours for both temperature and humidity.

@@ -361,47 +361,26 @@ The CT skill used was pattern recognition because most of the codes were repetit
 
 ![](min.png)
 
-<sub> Fig.20 shows the graphs of mean, standard deviation, minimum, maximum, and median.
-    
-As for the standard deviation, we decided to separate it from the other values and add it to a separate set of graphs with the smooth-out data. This is because we were afraid that if too many lines, the graph would become messy or hard to read. Same as the mean and median, we used np. from the NumPy library as well.
-
-```.py
-# room humidity
-plt.axhline(y=np.std(room_hum_smooth), color="blueviolet", label="standard deviation")
-
-
-# room temperature
-plt.axhline(y=np.std(room_temp_smooth), color="blueviolet")
-
-# outside humidity
-plt.axhline(y=np.std(outside_hum_smooth), color="purple")
-
-# outside temperature
-plt.axhline(y=np.std(outside_temp_smooth), color="purple")
-```
-<sub> Fig.20 shows the graphing code the standard deviation line
-
-    
-    
-<sub> Fig.21 shows the graph with standard deviation line
-    
+<sub> Fig.19 shows the graphs of mean, standard deviation, minimum, maximum, and median.
+        
 We presented the standard deviation by using numpy library. After creating a horizontal line that would represent the value for standard deviation along with lines representing values of mean, maximum, minimum and median we realized that the graph would look too messy and hard too read, becaue standard deviation value on the graph is located lower than the minimum value. Aditionally, we created other graph that would represent just standard deviation along with the smoothed version of the data collected.
     
 ```.py
  plt.axhline(y=np.std(room_hum_smooth), color="blueviolet", label="standard deviation")   
 ```
-<sub> Fig.22 shows the line of the code used to plot the value of the standard deviation on the graph
+<sub> Fig.20 shows the line of the code used to plot the value of the standard deviation on the graph
 
 ![](stad.png)
     
-<sub> Fig.23 shows the values for the standard deviation along with the smoothed version of the data collected
+<sub> Fig.21 shows the values for the standard deviation along with the smoothed version of the data collected
     
 ## 4. Create a prediction the subsequent 12 hours for both temperature and humidity.
 
 In order to go beyond knowing what has happened to provide the best assessment of what will happen in the future we provided the visual representation of the subsequent 12 hours for the data collected. We used numpy library and polyfit function, which we also previously used when we were plotting linear models for the smoothed version of the data. The difference is that we appended the range of the samples and divided the prediction and the actual linear model by vertical line so the client can easily distinguish between these two. 
     
 ![](prediction.png)
-<sub> Fig.24 shows the prediction of the data for the subsequent 12 hours   
+    
+<sub> Fig.22 shows the prediction of the data for the subsequent 12 hours   
 
        
 ## MVP (minimal viable product 'prototype')
